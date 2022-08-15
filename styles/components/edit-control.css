@@ -1,0 +1,115 @@
+.editor {
+    flex-direction: column;
+}
+.control-box {
+    width: 50%; 
+}
+
+.control-box >*{
+    margin-top: 10px;
+}
+.control-box button {
+    width: 40px;
+    height: 40px;
+    box-shadow: 3px 3px 0 rgb(92 92 92 / 66%), inset 0 2px 0 rgb(255 255 255 / 33%);
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.control-box .line-input {
+    /* height: 50px; */
+    box-shadow: 1px 5px 0 #bbc4d1, inset 0 5px 0 #ffffff;
+    background-color: #ebeef3;
+    font-family: 'poppins';
+    text-align: center;
+    font-size: 25px;
+    color: #3d3d3d;
+}
+
+.control-box .fa.palette>* {
+    width: 90%;
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+}
+
+.control-box .general-edit-btns .switch {
+    box-shadow: 1px 6px 1 #4186c6, inset 0 5px  #ffffff;
+    background-color: #086fcf;
+}
+
+.control-box .general-edit-btns .add-line {
+    box-shadow: 1px 6px 1 #5ecc6b, inset 0 5px 0 #ffffff;
+    background-color: #239c16;
+}
+
+.control-box .general-edit-btns .trash {
+    box-shadow: 1px 6px 1 #d6755c, inset 0 5px 0 #ffffff;
+    background-color: #d83924;
+}
+
+.control-box .item-font {
+    width: 100%;
+    height: 30px;
+    margin-top: 5px;
+    border-radius: 30px;
+    border: 1px solid black;
+    text-align: center;
+    font-family: 'poppins-semi-bold';
+    text-transform: uppercase;
+    font-weight: 200;
+    font-size: 20px;
+}
+
+.control-box .action-btns {
+    /* width: 80%; */
+    height: 50px;
+}
+
+.control-box .action-btns>* {
+    width: 100%;
+    height: 100%;
+    color: var(--clr5);
+    font-size: 15px;
+}
+
+.control-box .action-btns span {
+    font-family: 'poppins';
+    margin-inline-start: 10px;
+}
+.control-box .action-btns span:hover {
+    color: black;
+}
+.control-box .action-btns .share {
+    box-shadow: 1px 6px 1 #165c9c, inset 0 5px 0 #ffffff;
+    background-color: #1e7cd3;
+}
+
+.control-box .action-btns .download {
+    box-shadow: 1px 6px 1 #632687, inset 0 5px 0 #ffffff;
+    background-color: #8f44bb;
+}
+
+.control-box .action-btns .save {
+    box-shadow: 1px 6px 1 #d8d227, inset 0 5px 0 #ffffff;
+    background-color: #bb9201;
+}
+
+.text-edit-btns.grid-container {
+
+    display: grid;
+    padding: 10px;
+    grid-template-columns: repeat(5, 1fr);
+    background-image: var(--linrgr);
+    border-radius: 30px;
+}
+
+.text-edit-btns.grid-container >*:hover {
+    background-image: var(--linrgr);
+
+}
+.text-edit-btns.grid-container .item-font {
+    grid-area: 2 / 1 / 2 / 4;
+    border: 2px solid;
+    box-shadow: 3px 3px 0 rgb(92 92 92 / 66%), inset 0 2px 0 rgb(255 255 255 / 33%);
+}

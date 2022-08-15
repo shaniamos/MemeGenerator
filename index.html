@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme-Generator</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body class="main-layout" onload="init()">
+
+    
+    <div class="main-screen full" onclick="toggleMenu()"></div>
+
+    <header class="main-header flex space-between align-center">
+        <div class="logo"><img src="imgs/LOGO.png" alt=""></div>
+        <nav id="main-menu" class="header-nav-wrapper">
+            <ul class="main-menu-list clean-list  flex space-between align-center">
+                <li><a onclick="init()" href="#">Gallery</a></li>
+                <li><a onclick="initGallery('memes')" href="#">Memes</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+
+        <button class="toggle-menu fa burger" onclick="toggleMenu()"></button>
+    </header>
+
+    <!-- MAIN-CONTENT -->
+    <main class="main-content">
+
+        <!-- GALLERY SECTION -->
+        <section class="gallery flex space-between column">
+            <header class="gallery-header flex space-between align-center">
+                <input list="filterBy" id="select-filter" type="search" class="search" placeholder="Search" onchange="onSetImagesFilter(this.value)">
+                <datalist id="filterBy">
+                    <option value="funny">
+                    <option value="cute">
+                    <option value="sad">
+                    <option value="animal">
+                    <option value="happy">
+                    <option value="crazy">
+                    <option value="baby">
+                </datalist>
+                <button class="flexible-btn" onclick="onImgSelect(undefined)">Im flexible</button>
+                <div class="filter flex space-between align-center">
+                    <div class="keys-container flex align-center">
+                        <button class="key funny-filter" onclick="onSetImagesFilter('funny')">Funny</button>
+                        <button class="key animal-filter" onclick="onSetImagesFilter('animal')">Animal</button>
+                        <button class="key men-filter" onclick="onSetImagesFilter('cute')">Cute</button>
+                        <button class="key woman-filter" onclick="onSetImagesFilter('crazy')">Crazy</button>
+                    </div>
+                    <button class="more-btn">More</button>
+                </div>
+            </header>
+            <div class="gallery gallery-wrapper grid-container">
+            </div>
+        </section>
+
+        <!-- EDITOR SECTION -->
+        <section class="editor flex space-between align-center none">
+            <div class="canvas-container">
+                <canvas id="meme-canvas" width="450" height="450" ></canvas>
+            </div>
+            <div class="control-box flex column align-center">
+                <input class="line-input" type="text" onkeyup="onTypeLine(this.value)">
+                <div class="general-edit-btns flex space-between align-center">
+                    <button class="fa switch" onclick="onSwitchLines()"></button>
+                    <button class="fa add-line" onclick="onCreateLine()"></button>
+                    <button class="fa trash" onclick="onDeleteLine()"></button>
+                </div>
+                <div class="text-edit-btns grid-container">
+                    <button class="fa plus" onclick="onIncreaseSize()"></button>
+                    <button class="fa minus" onclick="onDecreaseSize()"></button>
+                    <button class="fa align-left" onclick="onAlignChange('right')"></button>
+                    <button class="fa align-center" onclick="onAlignChange('center')"></button>
+                    <button class="fa align-right" onclick="onAlignChange('left')"></button>
+                    <select class="item-font" name="font-family-select" id="font-select"
+                        onchange="onChangeFont(this.value)">
+                        <option value="Impact">Impact</option>
+                        <option value="Arial">Arial</option>
+                        <option value="Lato">Lato</option>
+                        <option value="Verdana">Verdana</option>
+                        <option value="Times New Roman">Times New Roman</option>
+                    </select>
+                    <button>S</button>
+                    <button class="fa palette"><input type="color" onchange="onChangeColor(this.value)"></button>
+                </div>
+                <!-- <div class="emoji-container">🙉🙊🙈😎😒😊</div> -->
+                <div class="action-btns flex space-between align-center">
+                    <button class="fa share" onclick="onShareCanvas()"><span> Share</span></button>
+                    <button class="fa download" onclick="onDownloadCanvas()"><span> Download</span></button>
+                    <button class="fa save" onclick="onSaveCanvas()"><span class="save-btn-text"> Save</span></button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER SECTION -->
+    <footer class="main-footer-container full">
+        <div class="main-footer">
+            <div class="logo footer-logo">
+                <!-- <img src="/imgs/LOGO.png" alt=""> -->
+            </div>
+        </div>
+    </footer>
+    <!-- SRC -->
+    <script src="js/utils.js"></script>
+    <script src="js/storageService.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/memeService.js"></script>
+    <!-- GALLERY -->
+    <script src="js/galleryController.js"></script>
+    <script src="js/galleryService.js"></script>
+    <!-- MEME -->
+    <script src="js/memeController.js"></script>
+    <!-- UTILS -->
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+html {
+    font-family: poppins;
+    color: var(--clr5);
+}
+
+body {
+    font-size: 1.3125rem;
+    margin: 15px;
+    background-color: var(--clr1);
+}
+
+main {
+    background-color: var(--clr4);
+    border-radius: 10px;
+    margin-block-start: 20px;
+    padding: 20px;
+    width: 90vw;
+    /* height: 60vh; */
+}
+
+button {
+    border-radius: 30px;
+}
+
+input {
+    border-radius: 30px;
+}
+
+a {
+    color: var(--clr2);
+    text-decoration: none;
+}

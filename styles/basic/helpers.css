@@ -1,0 +1,105 @@
+/* flex helper */
+
+.flex {
+    display: flex;
+}
+
+.flex.space-between {
+    justify-content: space-between;
+}
+
+.flex.align-center {
+    align-items: center;
+}
+
+.flex.column {
+    flex-direction: column;
+}
+
+/* list helpers */
+
+.clean-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+@font-face {
+    font-family: fa;
+    /* src: url(/fonts/fontAwesome/fa-solid-900.ttf); */
+    src: url("../../fonts/fontAwesome/fa-solid-900.ttf")
+}
+
+.fa {
+    font-family: fa;
+}
+
+.fa.plus::before {
+    content: '\f00e';
+}
+
+.fa.minus::before {
+    content: '\f010';
+}
+
+.fa.align-center::before {
+    content: '\f037';
+}
+
+.fa.align-left::before {
+    content: '\f036';
+}
+
+.fa.align-right::before {
+    content: '\f038';
+}
+
+.fa.palette::after {
+    content: '\f53f';
+}
+
+.fa.add-line::before {
+    content: '\2b';
+}
+
+.fa.trash::before {
+    content: '\f1f8';
+}
+
+.fa.switch::before {
+    content: '\f338';
+}
+
+.fa.upload::before {
+    content: '\f093';
+}
+
+.fa.download::before {
+    content: '\f019';
+}
+
+.fa.share::before {
+    content: '\f1e0';
+}
+
+.fa.burger::before {
+    content: '\f805';
+}
+
+@font-face {
+    font-family: foo;
+    src: url(/fonts/fontAwesome/fa-brands-400.ttf);
+}
+
+.foo.facebook::before {
+    content: '\f082';
+}
+
+.foo.github::before {
+    content: '\f092';
+}
+
+.foo.linkedin::before {
+    content: '\f08c';
+}
+

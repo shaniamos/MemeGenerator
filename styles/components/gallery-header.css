@@ -1,0 +1,75 @@
+.gallery-header {
+    flex-direction: column;
+    gap: 10px;
+}
+
+.gallery-header .filter {
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.gallery-header>* {
+    width: 100%;
+    height: 100%;
+}
+
+.gallery-header .filter>* {
+    width: 100%;
+}
+
+.gallery-header .filter .keys-container {
+    height: 40px;
+}
+
+
+
+.gallery-header .filter .more-btn,
+.gallery-header .flexible-btn {
+    background-image: var(--linrgr);
+    border-radius: 37px;
+    border: none;
+    color: var(--clr5);
+    font-size: 1.125rem;
+}
+
+.gallery-header .search {
+    background-color: var(--clr1);
+    background-repeat: no-repeat;
+    border: none;
+    text-align: center;
+    font-family: inherit;
+    height: 40px;
+}
+
+input[id="select-filter"]:active,
+input[id="select-filter"]:focus {
+    background-image: var(--linrgr);
+    color: white;
+
+}
+
+input[id="select-filter"] {
+    color: white;
+}
+
+.keys-container {
+    justify-content: space-around;
+    background-color: var(--clr2);
+    box-shadow: 0 3px 6px 1px rgba(0, 0, 0, 0.15);
+    border-radius: 30px;
+}
+
+.keys-container>* {
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    color: var(--clr5);
+    margin-inline: 7px;
+}
+
+button.key:hover {
+    background-color: var(--clr5);
+    border-radius: 20px;
+    color: var(--clr6);
+}

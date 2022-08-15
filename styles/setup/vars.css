@@ -1,0 +1,23 @@
+:root {
+    /* color palete: */
+    /* body background */
+    --clr1: #22252c;
+    /* gallery background */
+    --clr4: #383b42;
+    /* keys-filter background + search color */
+    --clr5: #ffffff;
+    /* font color */
+    --clr2: #9aa3b1;
+    --clr2real: #ebeef3;
+    /* onclick nav */
+    /* --clr6: #21ac91; */
+    --clr6: #ff6d04;
+    /* linear gradiend colors */
+    /* --linrgr: linear-gradient(-86deg, #33be6d 0%, #0c98b9 100%); */
+    --linrgr: linear-gradient(86deg, #ff6d04 0%, #d1bd3b 100%);
+
+    /* mq variables */
+    --large: 1060px;
+    --medium: 850px;
+    --small: 600px;
+}

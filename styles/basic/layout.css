@@ -1,0 +1,11 @@
+
+.main-content {
+    /* width: 90vw; */
+    /* height: 70vh; */
+}
+
+.main-layout >*:not(.full) {
+    max-width: 1200px;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+}
